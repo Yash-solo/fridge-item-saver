@@ -75,8 +75,11 @@ header{
     font-size:20px;
     cursor:pointer;
 }
+.Dash.active{
+    background-color:rgb(181, 252, 158);
+}
 .navLinks .navLinksItems li:hover{
-    background-color:rgb(180, 241, 180);
+    background-color:rgb(209, 208, 208);
     transition:all 0.2s ease-out;
 }
 
