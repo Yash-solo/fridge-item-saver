@@ -1,0 +1,126 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height:10vh;
+    width:100%;
+    background-color:rgb(214, 214, 226);
+    position:relative;
+    left:240px;
+}
+/* ====navbar==== */
+.navLinksForMOBILE{
+    display:none;
+}
+nav{
+    
+    height:100%;
+    min-width:200px;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:rgb(255, 255, 255);
+    backdrop-filter:blur(9px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+header{
+    height:99%;
+    width:98%;
+    display:flex;
+    flex-direction:column;
+    
+}
+.Burger{
+    display:none;
+}
+
+.CUT{
+        display:none;
+    }
+/* logo */
+.logoImage{
+    height:70px;
+    
+}
+.logoImage img{
+    border-radius:20px;
+    padding:5px;
+}
+.navLinks{
+    width:100%;
+    padding:20px;
+}
+.navLinks .navLinksItems{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    list-style: none;
+    gap:20px;
+}
+.navLinks .navLinksItems li{
+    height:70px;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    color:rgb(34, 34, 34);
+    border-radius:15px;
+    font-size:20px;
+    cursor:pointer;
+}
+.navLinks .navLinksItems li:hover{
+    background-color:rgb(180, 241, 180);
+    transition:all 0.2s ease-out;
+}
+
+/* =====FOR MOBILE===== */
+
+
+@media (max-width:729px){
+    /* ====navbar==== */
+    nav{
+        width:100%;
+        height: 62px;
+        display:flex;
+        flex-direction:row;
+    }
+    nav header{
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logoImage{
+        width:190px;
+        height:100%;
+    }
+    .navLinks{
+        display: none;
+    }
+    .navLinksForMOBILE{
+        background-color:white;
+        display:none;
+        flex-direction:column;
+        align-items: center;
+        gap:20px;
+        justify-content: start;
+        list-style:none;
+    }
+    body{
+        position: relative;
+        top:62px;
+        left:0;
+    }
+    .Burger{
+        display:flex;
+    }
+
+
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>freshfood</title>
+    <link rel="Stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <nav>
+        <header>
+            <!-- ====burger for mobile===== -->
+            <div class="Burger"onclick="showSIDEBar()">
+                <svg xmlns="http://w3.org" viewBox="0 0 448 512" width="32" height="32" fill="#333333">
+                    <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM416 448H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/>
+                </svg>
+            </div>
+            <div class="CUT" onclick="stopSHOWBar()">
+                <svg xmlns="http://w3.org" viewBox="0 0 384 512" width="40" height="40" fill="currentColor">
+                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                </svg>
+            </div>
+
+            <!-- =====real navbar for dekstop====== -->
+            <div class="logoImage">
+                <img src="./otherImage/logo.png"height="100%" width="100%">
+            </div>
+            <div class="navLinks">
+                <ul class="navLinksItems">
+                    <li>
+                        <svg xmlns="http://w3.org" viewBox="0 0 576 512" width="25" height="25" fill="currentColor">
+                             <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32v160c0 35.3-28.7 64-64 64H384c-17.7 0-32-14.3-32-32V320H224v128c0 17.7-14.3 32-32 32H96c-35.3 0-64-28.7-64-64V287.6H0c-17 0-32-14-32-32.1c0-9 3.5-17.5 9.8-23.8L256 12.3c12.5-12.5 32.8-12.5 45.3 0l160 160V56c0-13.3 10.7-24 24-24h48c13.3 0 24 10.7 24 24v140.7l64.7 64.7c6.3 6.3 9.8 14.8 9.8 23.8z"/>
+                        </svg>
+                        <a>Deshboard</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://w3.org" viewBox="0 0 320 512" width="25" height="25" fill="currentColor">
+                            <path d="M32 0C14.3 0 0 14.3 0 32V480c0 17.7 14.3 32 32 32H288c17.7 0 32-14.3 32-32V320H0V192H320V32c0-17.7-14.3-32-32-32H32zM64 64c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16s-16-7.2-16-16V80c0-8.8 7.2-16 16-16zm0 192c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V288c0-8.8 7.2-16 16-16z"/>
+                        </svg>
+                        <a>Fridge items</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://w3.org" viewBox="0 0 512 512" width="23" height="23" fill="currentColor">
+                            <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/>
+                        </svg>
+                        <a>Add items</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </nav>
+    <!-- =====Links which will going to look when user will click on burger==== -->
+    <div class="mobile">
+            <ul class="navLinksForMOBILE">
+                <li>
+                    <svg xmlns="http://w3.org" viewBox="0 0 576 512" width="25" height="25" fill="currentColor">
+                         <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32v160c0 35.3-28.7 64-64 64H384c-17.7 0-32-14.3-32-32V320H224v128c0 17.7-14.3 32-32 32H96c-35.3 0-64-28.7-64-64V287.6H0c-17 0-32-14-32-32.1c0-9 3.5-17.5 9.8-23.8L256 12.3c12.5-12.5 32.8-12.5 45.3 0l160 160V56c0-13.3 10.7-24 24-24h48c13.3 0 24 10.7 24 24v140.7l64.7 64.7c6.3 6.3 9.8 14.8 9.8 23.8z"/>
+                    </svg>
+                    <a>Deshboard</a>
+                </li>
+                <li>
+                    <svg xmlns="http://w3.org" viewBox="0 0 320 512" width="25" height="25" fill="currentColor">
+                        <path d="M32 0C14.3 0 0 14.3 0 32V480c0 17.7 14.3 32 32 32H288c17.7 0 32-14.3 32-32V320H0V192H320V32c0-17.7-14.3-32-32-32H32zM64 64c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16s-16-7.2-16-16V80c0-8.8 7.2-16 16-16zm0 192c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V288c0-8.8 7.2-16 16-16z"/>
+                    </svg>
+                    <a>Fridge items</a>
+                </li>
+                <li>
+                    <svg xmlns="http://w3.org" viewBox="0 0 512 512" width="23" height="23" fill="currentColor">
+                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/>
+                    </svg>
+                <a>Add items</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ==body content=== -->
+    <h1>dekstop</h1>
+    
+</body>
+<script src="script.js"></script>
+</html>
