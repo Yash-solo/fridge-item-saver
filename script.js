@@ -1,16 +1,20 @@
 const cut = document.querySelector(".CUT")
 const burger = document.querySelector(".Burger")
 byDefaultDashboard();
+
 function showSIDEBar(){
     document.querySelector(".navLinksForMOBILE").style.display="flex";
     burger.style.display ="none"
     cut.style.display = "flex";
 }
+
 function stopSHOWBar(){
     document.querySelector(".navLinksForMOBILE").style.display="none";
     burger.style.display ="flex"
     cut.style.display = "none";
 }
+
+
 function showDashBoard(){
     //3 buttons background coloring animation
     document.querySelector('.Dash').style.backgroundColor="rgb(181, 252, 158)";
@@ -41,6 +45,7 @@ function showFridgeItems(){
         <h1>Here I will show the fridge inventory</h1>
     </div>`
 }
+
 function showADDitems(){
     //3 buttons background coloring animation
     document.querySelector('.Dash').style.backgroundColor="#fff";
@@ -48,8 +53,25 @@ function showADDitems(){
     document.querySelector('.addItems').style.backgroundColor="rgb(181, 252, 158)";
 
     document.querySelector('.content').innerHTML=`
-    <div class="ADD">
-        <h5>We will add items here</h5>
+    <div class="AddItemContainer">
+      <div class="addITems">
+        <h1>Add your Fridge items here!</h1>
+        <ul>
+            <li>
+                <h3>Enter your item name</h3>
+                <input type="text" placeholder=" ex:- 'rice'">
+            </li>
+            <li>
+                <h3>Enter in how many days your item will expire</h3>
+                <input type="number" placeholder="Ex:- In 3 days ">
+            </li>
+            <li>
+                <h3>Enter the category here</h3>
+                <input type="text" placeholder ="Ex:- name:- 'aalu' then category:- 'vegitable'">
+            </li>
+        </ul>
+        <button>Add Items</button>
+      </div>
     </div>`
 }
 function byDefaultDashboard(){

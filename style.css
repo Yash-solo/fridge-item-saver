@@ -116,8 +116,55 @@ header{
 }
 
 /* =====FOR MOBILE===== */
-
-
+.content .AddItemContainer{
+    height:100vh;
+    width:80%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+.content .AddItemContainer .addITems{
+    min-height:500px;
+    width: 85%;
+    background-color:white;
+    border-radius:20px;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    align-items: start;
+    justify-content: start;
+    gap:40px;
+    position:relative;
+}
+.content .AddItemContainer .addITems ul{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    justify-content: start;
+    gap:20px;
+    list-style: none;
+    color:rgb(39, 39, 39);
+}
+.content .AddItemContainer .addITems button{
+    position:absolute;
+    bottom:30px;
+    min-height:50px;
+    min-width:200px;
+    border-radius:10vh;
+    border:none;
+    background-color:rgb(181, 252, 158);
+    font-size:20px;
+    cursor:pointer;
+}
+.content .AddItemContainer .addITems ul li input{
+    min-height:40px;
+    width:50vw;
+    margin:5px;
+    padding:5px;
+    border-radius:10px;
+    border:1px solid grey;
+}
 @media (max-width:729px){
     /* ====navbar==== */
     nav{
@@ -168,5 +215,28 @@ header{
     .container{
         background-color:rgb(181, 252, 158);
     }
+    .content .AddItemContainer{
+        height:100vh;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+    }   
 
+    .content .AddItemContainer .addITems ul li input{
+        width:210px;
+    }   
+    .content .AddItemContainer .addITems ul li h3{
+        color:rgb(44, 44, 44);
+        font-size:15px;
+    }
+    .content .AddItemContainer .addITems h1{
+        font-size:25px;
+        color:rgb(44,44,44);
+    }
+    .content .AddItemContainer .addITems button{
+        min-height:40px;
+        min-width:200px;
+    }
 }
