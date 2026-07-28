@@ -1,5 +1,6 @@
 const cut = document.querySelector(".CUT")
 const burger = document.querySelector(".Burger")
+byDefaultDashboard();
 function showSIDEBar(){
     document.querySelector(".navLinksForMOBILE").style.display="flex";
     burger.style.display ="none"
@@ -50,4 +51,7 @@ function showADDitems(){
     <div class="ADD">
         <h5>We will add items here</h5>
     </div>`
+}
+function byDefaultDashboard(){
+    showDashBoard();
 }
