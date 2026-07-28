@@ -1,6 +1,6 @@
 const cut = document.querySelector(".CUT")
 const burger = document.querySelector(".Burger")
-const additem = document.querySelector(".add")
+
 byDefaultDashboard();
 
 function showSIDEBar(){
@@ -71,19 +71,31 @@ function showADDitems(){
                 <input type="text" class="category" placeholder ="Ex:- name:- 'aalu' then category:- 'vegitable'">
             </li>
         </ul>
-        <button class="add">Add Items</button>
+        <button id="addIt"  >Add Items</button>
       </div>
     </div>`
+    let additem = document.querySelector("#addIt");
+
+    let food = JSON.parse(localStorage.getItem('items'))||[];
+
+    //adding items in local storage 
+    additem.addEventListener('click',()=>{
+        let ItemName = document.querySelector('.item');
+        let ItemCate = document.querySelector('.category');
+        let ItemExp = document.querySelector('.expire');
+
+        let item = {"ItemName":ItemName.value,"category":ItemCate.value,"ExpireD":ItemExp.value};
+        food.push(item);
+        console.log(food);
+        localStorage.setItem("items",JSON.stringify(food));
+        //user experience
+        alert("Your item added successfully!");
+        ItemName.value= "";
+        ItemCate.value = "";
+        ItemExp.value = "";
+
+    })
 }
 function byDefaultDashboard(){
     showDashBoard();
 }
-
-//adding items in local storage 
-additem.addEventListener('click',()=>{
-    let ItemName = document.querySelector('.item').value;
-    let ItemCate = document.querySelector('.category').value;
-    let ItemExp = document.querySelector('.expire').value;
-
-    
-})
