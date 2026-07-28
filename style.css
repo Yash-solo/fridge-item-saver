@@ -165,6 +165,10 @@ header{
     border-radius:10px;
     border:1px solid grey;
 }
+.content .AddItemContainer .addITems .invalid{
+    color:red;
+    margin-bottom:51px;
+}
 @media (max-width:729px){
     /* ====navbar==== */
     nav{

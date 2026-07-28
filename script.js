@@ -70,6 +70,7 @@ function showADDitems(){
                 <h3>Enter the category here</h3>
                 <input type="text" class="category" placeholder ="Ex:- name:- 'aalu' then category:- 'vegitable'">
             </li>
+            <p class="invalid"></p>
         </ul>
         <button id="addIt"  >Add Items</button>
       </div>
@@ -77,22 +78,29 @@ function showADDitems(){
     let additem = document.querySelector("#addIt");
 
     let food = JSON.parse(localStorage.getItem('items'))||[];
-
+    
     //adding items in local storage 
     additem.addEventListener('click',()=>{
         let ItemName = document.querySelector('.item');
         let ItemCate = document.querySelector('.category');
         let ItemExp = document.querySelector('.expire');
+        
+        if(ItemName.value !== ""&& ItemCate.value !==""&&ItemExp.value!==""){
+            
+            document.querySelector('.invalid').innerHTML = "";
+            let item = {"ItemName":ItemName.value,"category":ItemCate.value,"ExpireD":ItemExp.value};
+            food.push(item);
+            console.log(food);
+            localStorage.setItem("items",JSON.stringify(food));
 
-        let item = {"ItemName":ItemName.value,"category":ItemCate.value,"ExpireD":ItemExp.value};
-        food.push(item);
-        console.log(food);
-        localStorage.setItem("items",JSON.stringify(food));
-        //user experience
-        alert("Your item added successfully!");
-        ItemName.value= "";
-        ItemCate.value = "";
-        ItemExp.value = "";
+            //user experience
+            alert("Your item added successfully!");
+            ItemName.value= "";
+            ItemCate.value = "";
+            ItemExp.value = "";
+        }else{
+            document.querySelector('.invalid').innerHTML = "*invalid item please enter any values"
+        }
 
     })
 }
