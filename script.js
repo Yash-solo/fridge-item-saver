@@ -1,5 +1,6 @@
 const cut = document.querySelector(".CUT")
 const burger = document.querySelector(".Burger")
+const additem = document.querySelector(".add")
 byDefaultDashboard();
 
 function showSIDEBar(){
@@ -59,21 +60,30 @@ function showADDitems(){
         <ul>
             <li>
                 <h3>Enter your item name</h3>
-                <input type="text" placeholder=" ex:- 'rice'">
+                <input type="text" class="item" placeholder=" ex:- 'rice'">
             </li>
             <li>
                 <h3>Enter in how many days your item will expire</h3>
-                <input type="number" placeholder="Ex:- In 3 days ">
+                <input type="number" class="expire" placeholder="Ex:- In 3 days ">
             </li>
             <li>
                 <h3>Enter the category here</h3>
-                <input type="text" placeholder ="Ex:- name:- 'aalu' then category:- 'vegitable'">
+                <input type="text" class="category" placeholder ="Ex:- name:- 'aalu' then category:- 'vegitable'">
             </li>
         </ul>
-        <button>Add Items</button>
+        <button class="add">Add Items</button>
       </div>
     </div>`
 }
 function byDefaultDashboard(){
     showDashBoard();
 }
+
+//adding items in local storage 
+additem.addEventListener('click',()=>{
+    let ItemName = document.querySelector('.item').value;
+    let ItemCate = document.querySelector('.category').value;
+    let ItemExp = document.querySelector('.expire').value;
+
+    
+})
